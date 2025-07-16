@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STGestion Boutique</title>
+  <style>
+    body {margin:0; font-family: Arial, sans-serif; color:#333;}
+    header {background:#000; color:#fff; text-align:center; padding:1rem;}
+    nav a {color:#fff; margin:0 15px; text-decoration:none;}
+    .hero {padding:4rem 2rem; background:url('https://images.unsplash.com/photo-1520975921233-94f2c22158a8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color:#fff; text-align:center;}
+    .hero h1 {font-size:3rem; margin:0;}
+    .section {padding:2rem; text-align:center;}
+    .products {display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;}
+    .card {background:#fff; border:1px solid #ddd; border-radius:8px; width:250px; overflow:hidden; text-align:left; display:flex; flex-direction:column;}
+    .card img {width:100%;}
+    .card-content {padding:1rem; flex-grow:1;}
+    .card-content h3 {margin-top:0;}
+    .btn {background:#000; color:#fff; padding:0.5rem 1rem; text-decoration:none; display:inline-block; margin-top:0.5rem; cursor:pointer;}
+    .cart-summary {margin-top:2rem; font-size:1.2rem;}
+    footer {background:#000; color:#fff; text-align:center; padding:1rem; margin-top:2rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STGestion Boutique</h1>
+    <nav>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Stylish Collections</h1>
+    <p>Discover the latest trends with STGestion Boutique</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+ <section class="section" id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+    <div class="card">
+      <img src="download (5).jpeg" alt="Product 1">
+      <div class="card-content">
+        <h3>Summer Floral Dress</h3>
+        <p>₹1,999</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?leather-jacket" alt="Product 2">
+      <div class="card-content">
+        <h3>Black Leather Jacket</h3>
+        <p>₹4,499</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?tshirt,white" alt="Product 3">
+      <div class="card-content">
+        <h3>White Graphic Tee</h3>
+        <p>₹799</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?jeans,blue" alt="Product 4">
+      <div class="card-content">
+        <h3>Blue Slim Jeans</h3>
+        <p>₹1,599</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?hoodie,grey" alt="Product 5">
+      <div class="card-content">
+        <h3>Grey Casual Hoodie</h3>
+        <p>₹1,299</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?skirt,fashion" alt="Product 6">
+      <div class="card-content">
+        <h3>Pleated Midi Skirt</h3>
+        <p>₹1,499</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?coat,beige" alt="Product 7">
+      <div class="card-content">
+        <h3>Beige Trench Coat</h3>
+        <p>₹3,999</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?shorts,summer" alt="Product 8">
+      <div class="card-content">
+        <h3>Casual Summer Shorts</h3>
+        <p>₹899</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?sweater,pink" alt="Product 9">
+      <div class="card-content">
+        <h3>Knitted Pink Sweater</h3>
+        <p>₹1,899</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/250x300/?blazer,formal" alt="Product 10">
+      <div class="card-content">
+        <h3>Formal Navy Blazer</h3>
+        <p>₹2,999</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    🛒 Items in Cart: <span id="cartCount">0</span>
+    <br/>
+    <button class="btn" onclick="checkout()">Checkout</button>
+  </div>
+</section>
+
+
+  <section class="section" id="about">
+    <h2>About STGestion Boutique</h2>
+    <p>STGestion Boutique is your destination for stylish, high-quality clothing at affordable prices. We believe fashion should be effortless and accessible for everyone.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@stgestionboutique.com | Phone: +91-12345-67890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 STGestion Boutique. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById('cartCount').innerText = cartCount;
+    }
+    function checkout() {
+      if (cartCount > 0) {
+        alert(`Thank you for shopping! You have ${cartCount} item(s) in your cart.`);
+        cartCount = 0;
+        document.getElementById('cartCount').innerText = cartCount;
+      } else {
+        alert("Your cart is empty!");
+      }
+    }
+  </script>
+</body>
+</html>

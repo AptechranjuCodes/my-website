@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STGestion News</title>
+  <style>
+    body {margin:0; font-family: Arial, sans-serif; background:#f9f9f9; color:#333;}
+    header {background:#b30000; color:#fff; padding:1rem; text-align:center;}
+    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;}
+    .container {display:flex; flex-wrap:wrap; padding:1rem;}
+    .main {flex:3; min-width:300px; margin-right:1rem;}
+    .sidebar {flex:1; min-width:200px; background:#fff; padding:1rem; border-radius:8px;}
+    .article {background:#fff; margin-bottom:1rem; padding:1rem; border-radius:8px;}
+    .article img {width:100%; border-radius:8px;}
+    .article h2 {margin:0.5rem 0;}
+    footer {background:#b30000; color:#fff; text-align:center; padding:1rem; margin-top:1rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STGestion News</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Politics</a>
+      <a href="#">Sports</a>
+      <a href="#">Entertainment</a>
+      <a href="#">Technology</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="main">
+      <!-- Sample articles -->
+      <div class="article">
+        <img src="https://source.unsplash.com/800x400/?breaking-news" alt="News Image 1">
+        <h2>Breaking: Government Announces New Policy</h2>
+        <p>The central government has introduced a new policy aimed at boosting the economy...</p>
+      </div>
+      <div class="article">
+        <img src="https://source.unsplash.com/800x400/?sports" alt="News Image 2">
+        <h2>Sports: India Wins Thrilling Match Against Rivals</h2>
+        <p>In an electrifying match last night, India secured a last-minute victory over their long-time rivals...</p>
+      </div>
+      <div class="article">
+        <img src="https://source.unsplash.com/800x400/?entertainment,bollywood" alt="News Image 3">
+        <h2>Entertainment: Upcoming Bollywood Blockbuster Announced</h2>
+        <p>The makers of the hit series revealed the first look of their much-awaited film...</p>
+      </div>
+      <div class="article">
+        <img src="https://source.unsplash.com/800x400/?technology" alt="News Image 4">
+        <h2>Tech: New Smartphone Launches with Cutting-Edge Features</h2>
+        <p>The latest smartphone model features AI-powered cameras, ultra-fast charging, and more...</p>
+      </div>
+    </div>
+    
+    <div class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Business</a></li>
+      </ul>
+      <h3>Latest Headlines</h3>
+      <ul>
+        <li><a href="#">Market hits record high</a></li>
+        <li><a href="#">Famous actor ties the knot</a></li>
+        <li><a href="#">New COVID variant detected</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 STGestion News. All rights reserved.</p>
+  </footer>
+</body>
+</html>
